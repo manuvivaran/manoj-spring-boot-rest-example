@@ -1,7 +1,7 @@
 FROM maven AS BUILD_STAGE
 WORKDIR /app
 COPY . /app
-RUN mvn clean install
+RUN mvn clean package
 
 FROM openjdk:11
 VOLUME /tmp
